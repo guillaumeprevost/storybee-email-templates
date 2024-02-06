@@ -1,0 +1,452 @@
+<!DOCTYPE html>  
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+  <style type="text/css">
+    /* QUICKSAND + MONTSERRAT FONTS */
+    @media screen {
+      /* latin-ext */
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gfD_u50.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local('Montserrat Medium'), local('Montserrat-Medium'), url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC3gnD_g.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      
+      /* latin-ext */
+      @font-face {
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/quicksand/v21/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/quicksand/v21/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      /* latin-ext */
+      @font-face {
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://fonts.gstatic.com/s/quicksand/v21/6xKtdSZaM9iE8KbpRA_hJVQNcOM.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      /* latin */
+      @font-face {
+        font-family: 'Quicksand';
+        font-style: normal;
+        font-weight: 600;
+        src: url(https://fonts.gstatic.com/s/quicksand/v21/6xKtdSZaM9iE8KbpRA_hK1QN.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    }
+  </style>
+    
+  <style type="text/css">
+    body {
+      background-color: rgba(35, 11, 148, 0.05);
+      color: #343434 !important;
+      font-family: 'Montserrat', 'Open Sans', 'Roboto', 'Segoe UI', Arial, sans-serif;
+    }
+    a,a:active, .footerContainer .textContent a{
+      color: #343434 !important;
+    }
+    a:hover{
+      color:#FF7A73 !important;
+    }
+    .title {
+      /* font-family: "Quicksand", sans-serif; */
+      font-family: 'Quicksand', 'Open Sans', 'Roboto', 'Segoe UI', Arial, sans-serif;
+      font-size: 2rem !important;
+      line-height: 2.5rem !important;
+      font-weight: 400;
+    }
+    .has-text-dark {
+      color: #230B94 !important;
+    }
+    .has-background-light {
+      background-color: rgba(35, 11, 148, 0.05) !important;
+      color: #343434 !important;
+    }
+    .has-background-dark {
+      background-color: #230B94 !important;
+      color: #FFFFFF !important;
+    }
+    .has-background-white {
+      background-color: #FFFFFF !important;
+    }
+    .is-rounded {
+      border-radius: 25px;
+    }
+    .is-rounded-bottom {
+      border-radius: 0px 0px 25px 25px;
+    }
+    .is-centered {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .has-text-centered {
+      text-align: center;
+    }
+    .textContentContainer {
+      max-width:100% !important;
+      width:100% !important;
+    }
+    .textContent {
+      word-break:break-word;
+    }
+    .button {
+      text-decoration: none;
+      color: #FFFFFF !important;
+      background-color: #FF7A73 !important;
+      border-radius: 290486px;
+      padding-left: calc(1em + 0.25em);
+      padding-right: calc(1em + 0.25em);
+      font-size: 1rem;
+      line-height: 1.5;
+      align-items: center;
+      border: 1px solid transparent;
+      box-shadow: none;
+      display: inline-flex;
+      height: 2.5rem;
+      text-align: center;
+      white-space: nowrap;
+      cursor: pointer;
+      font-style: inherit;
+      font-weight: inherit;
+    }
+    .button span {
+      padding: 0.5rem !important;
+    }
+    a.button:hover,a.button:active {
+      color: #FFFFFF !important;
+    }
+    .button:focus{
+      box-shadow: 0 0 0 0.125em rgba(255, 122, 115, 0.25);
+    }
+    #templateHeader {
+      height: 100px;
+    }
+    #bodyCell {
+      padding: 0px 15px 20px 15px;
+    }
+    #contentCell {
+      padding: 0px 45px 20px 45px;
+    }
+    #footerCell {
+      font-size: 14px;
+      padding: 0px 15px 20px 15px;
+    }
+    .socialFiller {
+      display: inline;
+    }
+
+    @media only screen and (min-width: 480px) {
+      .leftOnDesktop {
+        text-align: left !important;
+      }
+      .hideOnDesktop {
+        max-height: 0px;
+        font-size: 0;
+        display: none;
+      }
+      .ctaButtonContainer {
+        margin-left: 25px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      #bodyCell {
+        padding: 0px 0px 20px 0px;
+      }
+      #contentCell {
+        padding: 0px 15px 20px 15px;
+      }
+      .socialFiller {
+        display: none;
+      }
+    }      
+  </style>
+</head>
+
+<body bgcolor="#f4f3fa" class="has-background-light" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+  <center>
+    <table bgcolor="#f4f3fa" align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+      <tr>
+        <td align="center" valign="top" id="bodyCell">
+          
+          <!-- BEGIN TEMPLATE // -->
+          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+            
+            <!-- BEGIN HEADER // -->
+            <tr>  
+              <td align="center" valign="top">
+                <table id="templateHeader" class="is-rounded-bottom has-background-dark" bgcolor="#230B94" border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" valign="center" height="100" style="height: 100px; padding: 25px 8px; text-align:center;">
+                      <a href="https://storybee.fr?{{ params.utm_params }}&utm_content=header_logo" target="_blank">
+                        <img align="center" src="https://img.mailinblue.com/5917471/images/content_library/original/643920b5c48b3d01b81ccd29.png" width="256" style="max-width:256px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="image"/>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- // END HEADER -->
+            
+            <tr>
+              <td id="contentCell" valign="top">
+                <!--[if mso]>
+                <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                  <tr>
+                    <td valign="top" width="640" style="width:640px;">
+                      <![endif]-->
+                      <table id="templateBody" bgcolor="#FFFFFF" align="left" border="0" cellpadding="0" cellspacing="0" background="#ffffff" style="max-width:100%; min-width:100%;" width="100%" class="textContentContainer has-background-white is-rounded-bottom">
+                        <tbody>
+                          <tr>
+                            <td align="center" valign="top" class="leftOnDesktop textContent" style="padding: 16px 24px 0px 24px;">        
+                              <h1 class="leftOnDesktop title has-text-dark">Votre vente d'entreprise est en ligne sur Storybee 🚀</h1>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="top" class="textContent leftOnDesktop" style="padding: 0px 24px 8px;">
+                              <p>L'équipe vient de mettre en ligne la vente "{{ params.sale_title }}" sur le site Storybee. Vous pouvez la consulter en cliquant ici :</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td valign="top" align="center" class="leftOnDesktop">
+                              <!-- CTA Button -->
+                              <table border="0" cellpadding="0" cellspacing="0" style="padding: 0px 24px 32px 24px; border-collapse: separate !important;">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" valign="middle" bgcolor="#FF7A73" style="font-family: 'Montserrat', 'Open Sans', 'Roboto', 'Segoe UI', Arial, sans-serif; font-size: 16px; padding: 15px; border-radius: 50px !important; background-color: #FF7A73 !important;">
+                                      <a title="Voir mon annonce" href="{{ params.sale_url }}?{{ params.utm_params }}&utm_content=cta" target="_blank" style="display: block; font-weight: 500; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF;">
+                                        <span style="color:#FFFFFF; font-weight: 600;">
+                                          Voir la vente
+                                        </span>
+                                      </a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="top" class="textContent leftOnDesktop" style="padding: 0px 24px 8px;">
+                              <p style="font-weight: 500">Prochaine étape ?</p>
+                              <p>
+                                Des repreneurs intéressés vont nous contacter et nous vous présenterons les 
+                                profils qui vous correspondent le mieux. N'hésitez pas à nous contacter pour 
+                                toute question au sujet de votre transmission.
+                              </p>
+                              <br />
+                              <p>A très bientôt,<br />Marie-Laure de l'équipe Storybee</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>                        
+                      <!--[if mso]>
+                    </td>
+                  </tr>
+                </table>
+                <![endif]-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <table align="left" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="textContentContainer">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" style="padding-top: 30px; padding-right:24px; padding-left:24px;">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td align="center" valign="top">
+                                <!--[if mso]>
+                                <table align="center" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td align="center" valign="top">
+                                      <![endif]-->
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
+                                        <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="width: 48px; height: 48px; padding: 14px; border-radius: 44px;">
+                                              <a href="https://www.facebook.com/storybee.mna/" target="_blank">
+                                              <img src="https://img.mailinblue.com/5917471/images/content_library/original/64391f5037b61e49620c9aaa.png" alt="Facebook" width="48" style="width:48px; max-width:48px; display:block;"/>
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if mso]>
+                                    </td>
+                                    <td align="center" valign="top">
+                                    <![endif]-->
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="socialFiller">
+                                        <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="padding-left: 10px;padding-right:10px;">
+                                               
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if mso]>
+                                    </td>
+                                    <td align="center" valign="top">
+                                      <![endif]-->
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
+                                        <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="width: 48px; height: 48px; padding: 14px; border-radius: 44px;">
+                                              <a href="https://www.linkedin.com/company/storybee-official" target="_blank">
+                                              <img src="https://img.mailinblue.com/5917471/images/content_library/original/64391f4f1c698c17aa73b9b9.png" alt="LinkedIn" width="48" style="width:48px; max-width:48px; display:block;"/></a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if mso]>
+                                    </td>
+                                    <td align="center" valign="top">
+                                    <![endif]-->
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" class="socialFiller">
+                                        <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="padding-left: 10px;padding-right:10px;">
+                                               
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if mso]>
+                                    </td>
+                                    <td align="center" valign="top">
+                                      <![endif]-->
+                                      <table align="left" border="0" cellpadding="0" cellspacing="0" style="display:inline;">
+                                        <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="width: 48px; height: 48px; padding: 14px; border-radius: 44px;">
+                                              <a href="https://twitter.com/storybee_mna" target="_blank">
+                                                <img src="https://img.mailinblue.com/5917471/images/content_library/original/64391f50105f681f3779346b.png" alt="Twitter" width="48" style="width: 48px; max-width: 48px; display:block;"/>
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if mso]>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <![endif]-->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+
+            <tr>
+              <td align="center" valign="top">
+                <!-- BEGIN FOOTER // -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                  <tr>
+                    <td align="center" valign="top">
+                      <table border="0" cellpadding="0" cellspacing="0" width="100%" class="templateContainer">
+                        <tr>
+                          <td valign="top" class="footerContainer" style="padding-top:8px; padding-bottom:8px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="min-width:100%;">
+                              <tbody>
+                                <tr>
+                                  <td valign="top" style="padding-top:8px;">
+                                    <!--[if mso]>
+                                    <table align="left" border="0" cellspacing="0" cellpadding="0" width="100%" style="width:100%;">
+                                      <tr>
+                                        <td valign="top" width="640" style="width:640px;">
+                                          <![endif]-->
+                                          <table align="center" border="0" cellpadding="0" cellspacing="0" style="max-width:100%; min-width:100%;" width="100%" class="textContentContainer">
+                                            <tbody class="textContent">
+                                              <tr>
+                                                <td id="footerCell" align="center" valign="top">
+                                                  <p class="links">
+                                                    <a href="https://storybee.fr/equipe?{{ params.utm_params }}&utm_content=footer_link" target="_blank">Storybee</a>   
+                                                    <a href="mailto:hello@storybee.fr" target="_blank">Contactez-nous</a>   
+                                                    <a href="https://storybee.fr/legal?{{ params.utm_params }}&utm_content=footer_link" target="_blank">Mentions légales</a>   
+                                                    <a href="https://storybee.fr/legal/privacy?{{ params.utm_params }}&utm_content=footer_link" target="_blank">Vie privée</a>   
+                                                  </p>
+                                                  <p>Copyright © {{ time_now|date:"2006" }} Storybee SAS, Tous droits réservés.</p>
+                                                  <p>
+                                                    <a href="https://storybee.fr?{{ params.utm_params }}&utm_content=footer_link" target="_blank">https://storybee.fr</a>   
+                                                    <a href="{{ unsubscribe }}" target="_blank">Se désinscrire</a>
+                                                  </p>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                          <!--[if mso]>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <![endif]-->
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+                <!-- // END FOOTER -->
+              </td>
+            </tr>
+          </table>
+          <!-- // END TEMPLATE -->
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>
