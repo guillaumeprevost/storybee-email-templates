@@ -84,7 +84,7 @@
       }
     }
   </style>
-    
+
   <style type="text/css">
     body {
       background-color: rgba(35, 11, 148, 0.05);
@@ -247,15 +247,13 @@
                       <table id="templateBody" bgcolor="#FFFFFF" align="left" border="0" cellpadding="0" cellspacing="0" background="#ffffff" style="max-width:100%; min-width:100%;" width="100%" class="textContentContainer has-background-white is-rounded-bottom">
                         <tbody>
                           <tr>
-                            <td align="center" valign="top" class="leftOnDesktop textContent" style="padding: 16px 24px 0px 24px;">
-                              <h1 class="leftOnDesktop title has-text-dark">Merci pour votre inscription aux alertes repreneur Storybee !</h1>
+                            <td align="center" valign="top" class="leftOnDesktop textContent" style="padding: 16px 24px 0px 24px;">        
+                              <h1 class="leftOnDesktop title has-text-dark">{{ params.verification_result_title }}</h1>
                             </td>
                           </tr>
                           <tr>
                             <td align="center" valign="top" class="textContent leftOnDesktop" style="padding: 0px 24px 8px;">
-                                                            
-                              <p>Vous recevrez maintenant les nouvelles opportunités sélectionnées par nos experts directement dans votre boîte mail.<p>
-<p>En attendant, vous pouvez consulter les entreprises déjà en vente listées sur notre site, et créer votre compte repreneur pour accéder aux documents de présentation des entreprises.<p>
+                              <p>{{ params.verification_result_content}}</p>
                             </td>
                           </tr>
                           <tr>
@@ -265,9 +263,9 @@
                                 <tbody>
                                   <tr>
                                     <td align="center" valign="middle" bgcolor="#de655e" style="font-family: 'Inter', 'Open Sans', 'Roboto', 'Segoe UI', Arial, sans-serif; font-size: 16px; padding: 15px; border-radius: 10px !important; background-color: #de655e !important;">
-                                      <a title="Annonces de vente Storybee" href="https://storybee.fr/annonces?{{ params.utm_params }}&utm_content=cta" target="_blank" style="display: block; font-weight: 500; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF;">
+                                      <a title="Voir mon tableau de bord" href="{{ params.dashboard_url }}?{{ params.utm_params }}&utm_content=cta" target="_blank" style="display: block; font-weight: 500; letter-spacing: normal; line-height: 100%; text-align: center; text-decoration: none; color: #FFFFFF;">
                                         <span style="color:#FFFFFF; font-weight: 600;">
-                                          Voir les ventes
+                                          Voir mon tableau de bord
                                         </span>
                                       </a>
                                     </td>
@@ -278,15 +276,7 @@
                           </tr>
                           <tr>
                             <td align="center" valign="top" class="textContent leftOnDesktop" style="padding: 0px 24px 8px;">
-                              <p style="font-weight: 500">
-                                Pour toute question, contactez-nous à <a href="mailto:hello@storybee.fr">hello@storybee.fr</a>.<br/>
-                                Nous sommes là pour vous aider :)
-                              </p>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td align="center" valign="top" class="textContent leftOnDesktop" style="padding: 0px 24px 8px;">
-                              L'équipe Storybee
+                              <p>A très bientôt,<br />Guillaume de l'équipe Storybee</p>
                             </td>
                           </tr>
                         </tbody>
@@ -317,7 +307,7 @@
                                         <tbody>
                                           <tr>
                                             <td align="center" valign="top" style="width: 48px; height: 48px; padding: 14px; border-radius: 44px;">
-                                              <a href="https://www.facebook.com/storybee.mna/" target="_blank">
+                                              <a href="https://facebook.com/storybee.mna" target="_blank">
                                               <img src="https://img.mailinblue.com/5917471/images/content_library/original/64391f5037b61e49620c9aaa.png" alt="Facebook" width="48" style="width:48px; max-width:48px; display:block;"/>
                                               </a>
                                             </td>
@@ -423,7 +413,7 @@
                                                     <a href="https://storybee.fr/legal?{{ params.utm_params }}&utm_content=footer_link" target="_blank">Mentions légales</a>
                                                     <a href="https://storybee.fr/legal/privacy?{{ params.utm_params }}&utm_content=footer_link" target="_blank">Vie privée</a>
                                                   </p>
-                                                  <p>Copyright © 2021 Storybee SAS, Tous droits réservés.</p>
+                                                  <p>Copyright © {{ time_now|date:"2006" }} Storybee SAS, Tous droits réservés.</p>
                                                   <p>
                                                     <a href="https://storybee.fr?{{ params.utm_params }}&utm_content=footer_link" target="_blank">https://storybee.fr</a>
                                                     <a href="{{ unsubscribe }}" target="_blank">Se désinscrire</a>
